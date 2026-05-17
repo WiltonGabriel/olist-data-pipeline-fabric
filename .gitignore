@@ -6,7 +6,3 @@ __pycache__/
 # Arquivos de dados grandes ou temporários
 bronze/archive.zip
 .DS_Store
-
-# Opcional: Se quiser que o GitHub não fique pesado, 
-# você pode ignorar os CSVs da bronze e deixar só os da gold.
-# bronze/*.csv
