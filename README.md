@@ -66,30 +66,6 @@ A camada final contém os dados prontos para o negócio. Criamos agregações fo
 
 ---
 
-## 🚀 Como Executar o Pipeline
-
-Para reproduzir o ambiente e processar os dados:
-
-1. **Ambiente:** Certifique-se de ter o Python instalado e as dependências do projeto:
-```bash
-pip install -r requirements.txt
-
-```
-
-
-2. **Dados:** Os arquivos CSV devem ser alocados no diretório `/bronze`.
-3. **Execução:** Rode os scripts de ETL na sequência lógica:
-```bash
-python scripts/etl_silver.py
-python scripts/etl_gold.py
-
-```
-
-
-4. **Consumo:** Os arquivos gerados na pasta `/gold` podem ser importados diretamente para o Microsoft Fabric ou Power BI.
-
----
-
 ## 📊 Resultados e Insights
 
 O pipeline processou com sucesso toda a base histórica da Olist, revelando gargalos logísticos críticos. Identificamos uma **taxa média de atraso de 6,64%**, com variações regionais significativas que impactam diretamente o *Review Score* dos vendedores. O projeto agora serve como base para tomadas de decisão sobre parcerias logísticas e gestão de vendedores na plataforma.
