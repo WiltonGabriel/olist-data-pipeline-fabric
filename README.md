@@ -4,6 +4,24 @@
 Pipeline de Engenharia de Dados desenvolvido para analisar o **Lead Time** e a satisfação do cliente no marketplace Olist. O projeto utiliza uma arquitetura híbrida para contornar limitações de instabilidade em nuvem, processando dados pesados localmente e servindo os insights no Microsoft Fabric.
 
 ## 🏗️ Arquitetura Medallion
+graph LR
+    subgraph "Origem (Local)"
+        A[CSVs Brutos] -- Ingestão --> B{Python ETL}
+    end
+
+    subgraph "Microsoft Fabric (OneLake)"
+        B --> C[(Camada Bronze)]
+        C -- Limpeza --> D[(Camada Silver)]
+        D -- Agregação --> E[(Camada Gold)]
+    end
+
+    subgraph "Consumo"
+        E --> F[Power BI Dashboard]
+    end
+
+    style C fill:#cd7f32,stroke:#333,stroke-width:2px
+    style D fill:#c0c0c0,stroke:#333,stroke-width:2px
+    style E fill:#ffd700,stroke:#333,stroke-width:2px
 - **Bronze**: Dados brutos extraídos do dataset público da Olist.
 - **Silver**: Limpeza, tipagem de datas e normalização via Python (Pandas).
 - **Gold**: Agregação de KPIs de atraso por estado e identificação de vendedores ofensores.
