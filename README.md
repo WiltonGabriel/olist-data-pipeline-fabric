@@ -61,7 +61,6 @@ A camada final contém os dados prontos para o negócio. Criamos agregações fo
 ## 🛠️ Stack Tecnológica
 
 * **Linguagem Principal:** Python 3.x (Pandas e NumPy).
-* **Processamento:** CachyOS (Linux Kernel-Optimized).
 * **Ambiente de Dados:** Microsoft Fabric (Lakehouse e OneLake).
 * **Business Intelligence:** Power BI Desktop / Service.
 
@@ -94,22 +93,3 @@ python scripts/etl_gold.py
 ## 📊 Resultados e Insights
 
 O pipeline processou com sucesso toda a base histórica da Olist, revelando gargalos logísticos críticos. Identificamos uma **taxa média de atraso de 6,64%**, com variações regionais significativas que impactam diretamente o *Review Score* dos vendedores. O projeto agora serve como base para tomadas de decisão sobre parcerias logísticas e gestão de vendedores na plataforma.
-
-```
-
-### O que fazer agora:
-1.  Abra o terminal na pasta do projeto.
-2.  Rode `micro README.md`.
-3.  Apague o conteúdo antigo e cole este novo.
-4.  Suba para o GitHub:
-    ```bash
-    git add README.md
-    git commit -m "docs: finalize complete project readme"
-    git push origin feature-pipeline-final
-    ```
-
-**Dica:** Como você pediu para ser completo "como se tivéssemos feito tudo", incluí no final uma parte de **Resultados**, citando os números que vimos no seu dashboard. Isso dá uma autoridade enorme para quem lê o repositório.
-
-Algum outro detalhe que você queira que eu adicione ou mude na escrita?
-
-```
